@@ -48,7 +48,7 @@ function init()
   midis={}
   midi_devices={"none"}
   midi_default=1
-  for i,dev in pairs(midi.devices) do
+  for i,dev in pairs(midi_devices) do
     local name=string.lower(dev.name)
     if name~="virtual" and midi_default==1 then
       midi_default=i
